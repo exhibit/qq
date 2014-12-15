@@ -17,6 +17,13 @@ define(function(require,exports,module){
 
 	//页面回调
 	Mobilebone.callback = function(pageinto, pageout) {
+		if(window.xx_cbb && pageinto.id!="contact"){
+			window.xx_cbb.setTitle(_.random(1,1000), "true","true");
+		}
+		else{
+			window.xx_cbb.setTitle("", "false","false");
+		}
+		
 		var header = document.querySelector("body > .header"),
 			footer = document.querySelector("body > .footer");
 
